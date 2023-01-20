@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D836A3E4297AA50D00822C50 /* euan.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D836A3E3297AA50D00822C50 /* euan.jpeg */; };
 		D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836A3E5297AA65000822C50 /* FlatmateImage.swift */; };
+		D836A3E8297AB36700822C50 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D836A3E7297AB36700822C50 /* .gitignore */; };
 		D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE25297A96A40046BA1D /* FlatItApp.swift */; };
 		D8D6AE28297A96A40046BA1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE27297A96A40046BA1D /* ContentView.swift */; };
 		D8D6AE2A297A96A40046BA1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D6AE29297A96A40046BA1D /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		D836A3E3297AA50D00822C50 /* euan.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = euan.jpeg; sourceTree = "<group>"; };
 		D836A3E5297AA65000822C50 /* FlatmateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateImage.swift; sourceTree = "<group>"; };
+		D836A3E7297AB36700822C50 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D8D6AE22297A96A40046BA1D /* FlatIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D6AE25297A96A40046BA1D /* FlatItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatItApp.swift; sourceTree = "<group>"; };
 		D8D6AE27297A96A40046BA1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				D8D6AE3A297A9BB80046BA1D /* Models */,
 				D8D6AE39297A9BB00046BA1D /* Views */,
 				D8D6AE2B297A96A40046BA1D /* Preview Content */,
+				D836A3E7297AB36700822C50 /* .gitignore */,
 			);
 			path = FlatIt;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D836A3E8297AB36700822C50 /* .gitignore in Resources */,
 				D8D6AE2D297A96A40046BA1D /* Preview Assets.xcassets in Resources */,
 				D8D6AE2A297A96A40046BA1D /* Assets.xcassets in Resources */,
 				D836A3E4297AA50D00822C50 /* euan.jpeg in Resources */,
