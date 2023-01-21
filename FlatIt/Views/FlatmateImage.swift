@@ -13,7 +13,7 @@ struct FlatmateImage: View {
     var body: some View {
         image
             .resizable()
-            .frame(width: 60.0, height: 60.0)
+            .frame(width: 80.0, height: 80.0)
             .clipShape(RoundedRectangle(cornerRadius: 13.0))
             
         

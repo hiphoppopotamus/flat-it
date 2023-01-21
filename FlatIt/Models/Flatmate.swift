@@ -31,8 +31,8 @@ final class FlatmatesData: ObservableObject {
         ),
         Flatmate(
             id: 2,
-            firstName: "Ewan",
-            lastName: "Widjaja",
+            firstName: "Alicia",
+            lastName: "Wilcock",
             age: 23,
             occupation: "Cleaner",
             payday: Date.now

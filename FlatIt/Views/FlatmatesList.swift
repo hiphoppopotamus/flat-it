@@ -15,6 +15,7 @@ struct FlatmatesList: View {
             ForEach(flatmatesData.flatmates) { flatmate in
                 FlatmateRow(flatmate: flatmate)
             }
+            Spacer()
         }
     }
 }
