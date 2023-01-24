@@ -11,12 +11,19 @@ struct FlatmatesList: View {
     @EnvironmentObject var flatmatesData: FlatmatesData
     
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(flatmatesData.flatmates) { flatmate in
-                FlatmateRow(flatmate: flatmate)
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 0) {
+                    ForEach(flatmatesData.flatmates) { flatmate in
+                        FlatmateRow(flatmate: flatmate)
+                    }
+                    Spacer()
+                }
+                .padding(10.0)
             }
-            Spacer()
+            .navigationTitle("Babies")
         }
+    
     }
 }
 

@@ -42,6 +42,7 @@
 		D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */; };
 		D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE35297A97010046BA1D /* FlatmateRow.swift */; };
 		D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE37297A973C0046BA1D /* Flatmate.swift */; };
+		D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesList.swift; sourceTree = "<group>"; };
 		D8D6AE35297A97010046BA1D /* FlatmateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateRow.swift; sourceTree = "<group>"; };
 		D8D6AE37297A973C0046BA1D /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
+		D8FF1FF4297FE69F00193D49 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */,
 				D8D6AE35297A97010046BA1D /* FlatmateRow.swift */,
 				D836A3E5297AA65000822C50 /* FlatmateImage.swift */,
+				D8FF1FF4297FE69F00193D49 /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				D8D6AE28297A96A40046BA1D /* ContentView.swift in Sources */,
 				D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */,
 				D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */,
+				D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */,
 				D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */,
 				D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */,
 				D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */,

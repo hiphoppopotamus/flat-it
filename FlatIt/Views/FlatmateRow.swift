@@ -55,10 +55,11 @@ struct FlatmateRow: View {
         }
         .padding([.leading, .top, .bottom])
         .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: 15.0))
         .overlay(
             RoundedRectangle(cornerRadius: 15.0)
-                .stroke(.blue, lineWidth: 3)
+                .stroke(.blue, lineWidth: 1)
         )
     }
 }
