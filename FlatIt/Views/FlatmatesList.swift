@@ -16,12 +16,12 @@ struct FlatmatesList: View {
                 VStack(spacing: 0) {
                     ForEach(flatmatesData.flatmates) { flatmate in
                         FlatmateRow(flatmate: flatmate)
+                        Divider()
                     }
                     Spacer()
                 }
-                .padding(10.0)
             }
-            .navigationTitle("Babies")
+            .navigationTitle("Fl")
         }
     
     }

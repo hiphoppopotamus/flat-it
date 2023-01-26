@@ -43,6 +43,8 @@
 		D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE35297A97010046BA1D /* FlatmateRow.swift */; };
 		D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE37297A973C0046BA1D /* Flatmate.swift */; };
 		D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* RegisterView.swift */; };
+		EAA34ED82982229F0008F826 /* FlatIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */; };
+		EAA34EDA298222E70008F826 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA34ED9298222E70008F826 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		D8D6AE35297A97010046BA1D /* FlatmateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateRow.swift; sourceTree = "<group>"; };
 		D8D6AE37297A973C0046BA1D /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
 		D8FF1FF4297FE69F00193D49 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatIt.xcdatamodel; sourceTree = "<group>"; };
+		EAA34ED9298222E70008F826 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				D8D6AE3A297A9BB80046BA1D /* Models */,
 				D8D6AE39297A9BB00046BA1D /* Views */,
 				D8D6AE2B297A96A40046BA1D /* Preview Content */,
+				EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */,
+				EAA34ED9298222E70008F826 /* DataController.swift */,
 			);
 			path = FlatIt;
 			sourceTree = "<group>";
@@ -306,9 +312,11 @@
 				D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */,
 				D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */,
 				D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */,
+				EAA34EDA298222E70008F826 /* DataController.swift in Sources */,
 				D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */,
 				D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */,
 				D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */,
+				EAA34ED82982229F0008F826 /* FlatIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +519,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */,
+			);
+			currentVersion = EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */;
+			path = FlatIt.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D8D6AE1A297A96A40046BA1D /* Project object */;
 }
