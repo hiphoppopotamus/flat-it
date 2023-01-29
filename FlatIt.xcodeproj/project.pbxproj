@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836A3E5297AA65000822C50 /* FlatmateImage.swift */; };
+		D844B15D29865B7600CB03A5 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844B15C29865B7600CB03A5 /* RegisterButton.swift */; };
+		D844B1602986662E00CB03A5 /* FlatItDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D844B15E2986662E00CB03A5 /* FlatItDataModel.xcdatamodeld */; };
 		D8547FD2297BF76800655E3D /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FC9297BF76700655E3D /* Heebo-Regular.ttf */; };
 		D8547FD3297BF76800655E3D /* Heebo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FCA297BF76700655E3D /* Heebo-ExtraLight.ttf */; };
 		D8547FD4297BF76800655E3D /* Heebo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FCB297BF76700655E3D /* Heebo-Light.ttf */; };
@@ -43,12 +45,13 @@
 		D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE35297A97010046BA1D /* FlatmateRow.swift */; };
 		D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE37297A973C0046BA1D /* Flatmate.swift */; };
 		D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* RegisterView.swift */; };
-		EAA34ED82982229F0008F826 /* FlatIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */; };
 		EAA34EDA298222E70008F826 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA34ED9298222E70008F826 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D836A3E5297AA65000822C50 /* FlatmateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateImage.swift; sourceTree = "<group>"; };
+		D844B15C29865B7600CB03A5 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
+		D844B15F2986662E00CB03A5 /* FlatItDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatItDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D8547FC6297BF6EA00655E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8547FC9297BF76700655E3D /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
 		D8547FCA297BF76700655E3D /* Heebo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		D8D6AE35297A97010046BA1D /* FlatmateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateRow.swift; sourceTree = "<group>"; };
 		D8D6AE37297A973C0046BA1D /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
 		D8FF1FF4297FE69F00193D49 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatIt.xcdatamodel; sourceTree = "<group>"; };
 		EAA34ED9298222E70008F826 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,8 +179,8 @@
 				D8D6AE3A297A9BB80046BA1D /* Models */,
 				D8D6AE39297A9BB00046BA1D /* Views */,
 				D8D6AE2B297A96A40046BA1D /* Preview Content */,
-				EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */,
 				EAA34ED9298222E70008F826 /* DataController.swift */,
+				D844B15E2986662E00CB03A5 /* FlatItDataModel.xcdatamodeld */,
 			);
 			path = FlatIt;
 			sourceTree = "<group>";
@@ -199,6 +201,7 @@
 				D8D6AE35297A97010046BA1D /* FlatmateRow.swift */,
 				D836A3E5297AA65000822C50 /* FlatmateImage.swift */,
 				D8FF1FF4297FE69F00193D49 /* RegisterView.swift */,
+				D844B15C29865B7600CB03A5 /* RegisterButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,12 +314,13 @@
 				D8D6AE28297A96A40046BA1D /* ContentView.swift in Sources */,
 				D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */,
 				D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */,
+				D844B1602986662E00CB03A5 /* FlatItDataModel.xcdatamodeld in Sources */,
 				D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */,
+				D844B15D29865B7600CB03A5 /* RegisterButton.swift in Sources */,
 				EAA34EDA298222E70008F826 /* DataController.swift in Sources */,
 				D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */,
 				D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */,
 				D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */,
-				EAA34ED82982229F0008F826 /* FlatIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,13 +525,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		EAA34ED62982229F0008F826 /* FlatIt.xcdatamodeld */ = {
+		D844B15E2986662E00CB03A5 /* FlatItDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */,
+				D844B15F2986662E00CB03A5 /* FlatItDataModel.xcdatamodel */,
 			);
-			currentVersion = EAA34ED72982229F0008F826 /* FlatIt.xcdatamodel */;
-			path = FlatIt.xcdatamodeld;
+			currentVersion = D844B15F2986662E00CB03A5 /* FlatItDataModel.xcdatamodel */;
+			path = FlatItDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -6,36 +6,30 @@
 //
 
 import Foundation
+import CoreData
 
-struct Flatmate: Identifiable, Codable, Hashable {
+final class Flatmate: NSManagedObject, Identifiable {
     
-    
-    var id: Int
-    var firstName: String
-    var lastName: String
-    var age: Int
-    var occupation: String
-    var payday: Date
+
+    @NSManaged var id: Int
+    @NSManaged var name: String
+    @NSManaged var age: Int
+//    var occupation: String
+//    var payday: Date
     
 }
 
 final class FlatmatesData: ObservableObject {
     @Published var flatmates: [Flatmate] = [
-        Flatmate(
-            id: 1,
-            firstName: "Euan",
-            lastName: "Widjaja",
-            age: 22,
-            occupation: "Software Engineer",
-            payday: Date.now
-        ),
-        Flatmate(
-            id: 2,
-            firstName: "Evan",
-            lastName: "Wadjaja",
-            age: 23,
-            occupation: "Cleaner",
-            payday: Date.now
-        )
+//        Flatmate(
+//            id: 1,
+//            name: "Euan Widjaja",
+//            age: 22
+//        ),
+//        Flatmate(
+//            id: 2,
+//            name: "Evan Wodjaja",
+//            age: 23
+//        )
     ]
 }

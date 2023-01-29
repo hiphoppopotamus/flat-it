@@ -14,14 +14,14 @@ struct FlatmatesList: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 0) {
-                    ForEach(flatmatesData.flatmates) { flatmate in
-                        FlatmateRow(flatmate: flatmate)
-                        Divider()
-                    }
+//                    ForEach(flatmatesData.flatmates) { flatmate in
+//                        FlatmateRow(flatmate: flatmate)
+//                        Divider()
+//                    }
                     Spacer()
                 }
             }
-            .navigationTitle("Fl")
+            .navigationTitle("Flatmates")
         }
     
     }
@@ -30,6 +30,6 @@ struct FlatmatesList: View {
 struct Flatmates_Previews: PreviewProvider {
     static var previews: some View {
         FlatmatesList()
-            .environmentObject(FlatmatesData())
+//            .environmentObject(FlatmatesData())
     }
 }

@@ -9,13 +9,15 @@ import SwiftUI
 
 struct FlatmateRow: View {
     
-    let flatmate: Flatmate
-    
+//    let flatmate: Flatmate
+    let flatmate: String
+
     var body: some View {
         HStack(alignment: .bottom) {
             FlatmateImage(image: Image("euan"))
             VStack(alignment: .leading, spacing: 0.0) {
-                Text("\(flatmate.firstName) \(flatmate.lastName)")
+//                Text("\(flatmate.name)")
+                Text("Flatmate Name")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                 
                 Divider()
@@ -65,11 +67,12 @@ struct FlatmateRow: View {
 }
 
 struct FlatmateRow_Previews: PreviewProvider {
-    static var flatmates = FlatmatesData().flatmates
+//    static var flatmates = FlatmatesData().flatmates
     
     static var previews: some View {
         VStack {
-            FlatmateRow(flatmate: flatmates[0])
-                .environmentObject(FlatmatesData())        }
+            FlatmateRow(flatmate: "")
+//                .environmentObject(FlatmatesData())
+        }
     }
 }
