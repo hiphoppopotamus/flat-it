@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct FlatmatesList: View {
-    @EnvironmentObject var flatmatesData: FlatmatesData
+    
+    @FetchRequest(fetchRequest: Flatmate.all()) private var flatmates
+
+    var provider = FlatmatesProvider.shared
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 0) {
-//                    ForEach(flatmatesData.flatmates) { flatmate in
-//                        FlatmateRow(flatmate: flatmate)
-//                        Divider()
-//                    }
+                    ForEach(flatmates) { flatmate in
+                        FlatmateRow(flatmate: flatmate)
+                        Divider()
+                    }
                     Spacer()
                 }
             }
@@ -27,9 +30,14 @@ struct FlatmatesList: View {
     }
 }
 
-struct Flatmates_Previews: PreviewProvider {
+struct FlatmateList_Previews: PreviewProvider {
     static var previews: some View {
-        FlatmatesList()
-//            .environmentObject(FlatmatesData())
+        let preview = FlatmatesProvider.shared
+        FlatmatesList(provider: preview)
+            .environment(\.managedObjectContext, preview.viewContext)
+            .previewDisplayName("Flatmates with data")
+            .onAppear {
+                Flatmate.makePreview(count: 4, in: preview.viewContext)
+            }
     }
 }

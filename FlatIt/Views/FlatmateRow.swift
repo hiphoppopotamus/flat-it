@@ -9,15 +9,13 @@ import SwiftUI
 
 struct FlatmateRow: View {
     
-//    let flatmate: Flatmate
-    let flatmate: String
+    let flatmate: Flatmate
 
     var body: some View {
         HStack(alignment: .bottom) {
             FlatmateImage(image: Image("euan"))
             VStack(alignment: .leading, spacing: 0.0) {
-//                Text("\(flatmate.name)")
-                Text("Flatmate Name")
+                Text("\(flatmate.name)")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
                 
                 Divider()
@@ -48,12 +46,9 @@ struct FlatmateRow: View {
                 .overlay(
                     Capsule()
                         .stroke(.blue, lineWidth: 2.5)
-                )
-//need to fix the wrid oadding from stroke thing.
-                
+                ) //need to fix the wrid oadding from stroke thing.
             }
             .padding(.leading, 6.0)
-//            .background(.blue)
         }
         .padding([.leading, .top, .bottom])
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -67,12 +62,7 @@ struct FlatmateRow: View {
 }
 
 struct FlatmateRow_Previews: PreviewProvider {
-//    static var flatmates = FlatmatesData().flatmates
-    
     static var previews: some View {
-        VStack {
-            FlatmateRow(flatmate: "")
-//                .environmentObject(FlatmatesData())
-        }
+        FlatmateRow(flatmate: .previewFlatmate())
     }
 }

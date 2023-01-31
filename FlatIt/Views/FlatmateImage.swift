@@ -15,8 +15,6 @@ struct FlatmateImage: View {
             .resizable()
             .frame(width: 80.0, height: 80.0)
             .clipShape(RoundedRectangle(cornerRadius: 13.0))
-            
-        
     }
 }
 
