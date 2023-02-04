@@ -3,7 +3,12 @@ import SwiftUI
 struct RegisterView: View {
     
     @State var name: String
-    @State var dateOfBirth: String
+    
+    @State var dateOfBirth: Date
+    @State var date: String
+    @State var month: String
+    @State var year: String
+
     @State var email: String
     @State var phoneNumber: String
     
@@ -14,7 +19,7 @@ struct RegisterView: View {
             
             Group {
                 TextField("Enter your name", text: $name)
-                    .textFieldStyle(OutlinedTextFieldStyle(size: 30))
+                    .textFieldStyle(TextFieldOutlineStyle(size: 30))
                     .padding([.leading, .trailing, .top], 20)
                 InputDivider()
                     .padding(.top, 5.0)
@@ -24,9 +29,16 @@ struct RegisterView: View {
             }
             
             Group {
-                TextField("Enter your bday", text: $dateOfBirth)
-                    .textFieldStyle(OutlinedTextFieldStyle(size: 30))
-                    .padding([.leading, .trailing, .top], 20)
+                HStack() {
+                    TextField("DD", text: $date)
+                    TextField("MM", text: $month)
+                    TextField("YYYY", text: $year)
+                                    
+                }
+                .fixedSize()
+                .textFieldStyle(TextFieldOutlineStyle(size: 30))
+                .padding([.leading, .trailing, .top], 20)
+                
                 InputDivider()
                     .padding(.top, 5.0)
 //                    Text("Hey Euan Widjaja,\nwhen’s your birthday?")
@@ -35,41 +47,40 @@ struct RegisterView: View {
             }
 
 
-            Group {
-                TextField("Enter your email", text: $email)
-                    .textFieldStyle(OutlinedTextFieldStyle(size: 24))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
-                    .padding(.top, 5.0)
-//                    Text("What's your email?")
-//                        .font(.system(size: 20, weight: .bold, design: .rounded))
-//                        .padding(.top, 10.0)
-            }
+//            Group {
+//                TextField("Enter your email", text: $email)
+//                    .textFieldStyle(TextFieldOutlineStyle(size: 24))
+//                    .padding([.leading, .trailing, .top], 20)
+//                InputDivider()
+//                    .padding(.top, 5.0)
+////                    Text("What's your email?")
+////                        .font(.system(size: 20, weight: .bold, design: .rounded))
+////                        .padding(.top, 10.0)
+//            }
+////
+//            Group {
+//                TextField("Enter your number", text: $phoneNumber)
+//                    .textFieldStyle(TextFieldOutlineStyle(size: 30))
+//                    .padding([.leading, .trailing, .top], 20)
+//                InputDivider()
+//                    .padding(.top, 5.0)
+//                Text("Also can I get \nyour number please lol")
+//                    .font(.system(size: 20, weight: .bold, design: .rounded))
+//                    .padding(.top, 10.0)
+//            }
 //
-            Group {
-                TextField("Enter your number", text: $phoneNumber)
-                    .textFieldStyle(OutlinedTextFieldStyle(size: 30))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
-                    .padding(.top, 5.0)
-                Text("Also can I get \nyour number please lol")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                    .padding(.top, 10.0)
-            }
-            
+
             Spacer()
-            
             RegisterButton(label: "Continue")
                 .padding(.top, 50.0)
         }
         .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
-        .background(.red)
         .multilineTextAlignment(.center)
 
     }
 }
 
-struct OutlinedTextFieldStyle: TextFieldStyle {
+struct TextFieldOutlineStyle: TextFieldStyle {
     var size: CGFloat
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
@@ -105,7 +116,10 @@ struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView(
             name: "",
-            dateOfBirth: "",
+            dateOfBirth: Date.now,
+            date: "",
+            month: "",
+            year: "",
             email: "",
             phoneNumber: ""
         )
