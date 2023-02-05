@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D836A3E5297AA65000822C50 /* FlatmateImage.swift */; };
+		D837AD8C298E1D7B00037DDD /* RegistrationStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D837AD8B298E1D7B00037DDD /* RegistrationStep.swift */; };
 		D844B15D29865B7600CB03A5 /* RegisterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D844B15C29865B7600CB03A5 /* RegisterButton.swift */; };
 		D844B1602986662E00CB03A5 /* FlatItDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D844B15E2986662E00CB03A5 /* FlatItDataModel.xcdatamodeld */; };
+		D8484094298F9E4A00B0F994 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8484093298F9E4A00B0F994 /* RegisterView.swift */; };
+		D8484096298F9F8C00B0F994 /* RegisterName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8484095298F9F8C00B0F994 /* RegisterName.swift */; };
+		D8484098298FA55000B0F994 /* RegisterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8484097298FA55000B0F994 /* RegisterEntry.swift */; };
+		D848409A298FAABC00B0F994 /* RegisterDob.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8484099298FAABC00B0F994 /* RegisterDob.swift */; };
+		D848409C298FAACE00B0F994 /* RegisterEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848409B298FAACE00B0F994 /* RegisterEmail.swift */; };
+		D848409E298FAADF00B0F994 /* RegisterNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = D848409D298FAADF00B0F994 /* RegisterNumber.swift */; };
 		D84EF89129892C260075C413 /* FlatmatesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84EF89029892C260075C413 /* FlatmatesProvider.swift */; };
 		D8547FD2297BF76800655E3D /* Heebo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FC9297BF76700655E3D /* Heebo-Regular.ttf */; };
 		D8547FD3297BF76800655E3D /* Heebo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FCA297BF76700655E3D /* Heebo-ExtraLight.ttf */; };
@@ -45,13 +52,20 @@
 		D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */; };
 		D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE35297A97010046BA1D /* FlatmateRow.swift */; };
 		D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE37297A973C0046BA1D /* Flatmate.swift */; };
-		D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* RegisterView.swift */; };
+		D8FF1FF5297FE69F00193D49 /* OldRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D836A3E5297AA65000822C50 /* FlatmateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateImage.swift; sourceTree = "<group>"; };
+		D837AD8B298E1D7B00037DDD /* RegistrationStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStep.swift; sourceTree = "<group>"; };
 		D844B15C29865B7600CB03A5 /* RegisterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterButton.swift; sourceTree = "<group>"; };
 		D844B15F2986662E00CB03A5 /* FlatItDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatItDataModel.xcdatamodel; sourceTree = "<group>"; };
+		D8484093298F9E4A00B0F994 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		D8484095298F9F8C00B0F994 /* RegisterName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterName.swift; sourceTree = "<group>"; };
+		D8484097298FA55000B0F994 /* RegisterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntry.swift; sourceTree = "<group>"; };
+		D8484099298FAABC00B0F994 /* RegisterDob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDob.swift; sourceTree = "<group>"; };
+		D848409B298FAACE00B0F994 /* RegisterEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmail.swift; sourceTree = "<group>"; };
+		D848409D298FAADF00B0F994 /* RegisterNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterNumber.swift; sourceTree = "<group>"; };
 		D84EF89029892C260075C413 /* FlatmatesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesProvider.swift; sourceTree = "<group>"; };
 		D8547FC6297BF6EA00655E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8547FC9297BF76700655E3D /* Heebo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Regular.ttf"; sourceTree = "<group>"; };
@@ -89,7 +103,7 @@
 		D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesList.swift; sourceTree = "<group>"; };
 		D8D6AE35297A97010046BA1D /* FlatmateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateRow.swift; sourceTree = "<group>"; };
 		D8D6AE37297A973C0046BA1D /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
-		D8FF1FF4297FE69F00193D49 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldRegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +117,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D837AD8D298E51DF00037DDD /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */,
+				D8484093298F9E4A00B0F994 /* RegisterView.swift */,
+				D8484097298FA55000B0F994 /* RegisterEntry.swift */,
+				D8484095298F9F8C00B0F994 /* RegisterName.swift */,
+				D8484099298FAABC00B0F994 /* RegisterDob.swift */,
+				D848409B298FAACE00B0F994 /* RegisterEmail.swift */,
+				D848409D298FAADF00B0F994 /* RegisterNumber.swift */,
+				D844B15C29865B7600CB03A5 /* RegisterButton.swift */,
+				D837AD8B298E1D7B00037DDD /* RegistrationStep.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D837AD8E298E520500037DDD /* Flatmates */ = {
+			isa = PBXGroup;
+			children = (
+				D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */,
+				D8D6AE35297A97010046BA1D /* FlatmateRow.swift */,
+				D836A3E5297AA65000822C50 /* FlatmateImage.swift */,
+			);
+			path = Flatmates;
+			sourceTree = "<group>";
+		};
 		D84EF89229892C2B0075C413 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,11 +245,8 @@
 		D8D6AE39297A9BB00046BA1D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */,
-				D8D6AE35297A97010046BA1D /* FlatmateRow.swift */,
-				D836A3E5297AA65000822C50 /* FlatmateImage.swift */,
-				D8FF1FF4297FE69F00193D49 /* RegisterView.swift */,
-				D844B15C29865B7600CB03A5 /* RegisterButton.swift */,
+				D837AD8E298E520500037DDD /* Flatmates */,
+				D837AD8D298E51DF00037DDD /* Register */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,14 +357,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D6AE28297A96A40046BA1D /* ContentView.swift in Sources */,
+				D837AD8C298E1D7B00037DDD /* RegistrationStep.swift in Sources */,
+				D848409E298FAADF00B0F994 /* RegisterNumber.swift in Sources */,
 				D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */,
+				D8484096298F9F8C00B0F994 /* RegisterName.swift in Sources */,
 				D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */,
+				D8484098298FA55000B0F994 /* RegisterEntry.swift in Sources */,
 				D844B1602986662E00CB03A5 /* FlatItDataModel.xcdatamodeld in Sources */,
-				D8FF1FF5297FE69F00193D49 /* RegisterView.swift in Sources */,
+				D8FF1FF5297FE69F00193D49 /* OldRegisterView.swift in Sources */,
 				D844B15D29865B7600CB03A5 /* RegisterButton.swift in Sources */,
 				D84EF89129892C260075C413 /* FlatmatesProvider.swift in Sources */,
+				D8484094298F9E4A00B0F994 /* RegisterView.swift in Sources */,
+				D848409C298FAACE00B0F994 /* RegisterEmail.swift in Sources */,
 				D836A3E6297AA65000822C50 /* FlatmateImage.swift in Sources */,
 				D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */,
+				D848409A298FAABC00B0F994 /* RegisterDob.swift in Sources */,
 				D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,14 +10,20 @@ import SwiftUI
 struct RegisterButton: View {
     
     var label: String
+    var toStep: RegistrationStep
+    @Binding var path: [RegistrationStep]
     
+
     var body: some View {
-        Button(action: {}) {
+        Button(action: {
+            path.append(toStep)
+        }) {
             Text(label)
         }
         .buttonStyle(RegisterButtonStyle())
     }
 }
+
 
 struct RegisterButtonStyle: ButtonStyle {
 
@@ -34,6 +40,10 @@ struct RegisterButtonStyle: ButtonStyle {
 
 struct PillButton_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterButton(label: "Continue")
+        RegisterButton(
+            label: "Continue",
+            toStep: .nameStep,
+            path: .constant([])
+        )
     }
 }

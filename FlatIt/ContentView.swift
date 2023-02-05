@@ -10,7 +10,17 @@ import SwiftUI
 struct ContentView: View {
         
     var body: some View {
-        FlatmatesList()
+        RegisterView()
+//        RegisterView(
+//            name: "",
+//            dateOfBirth: Date.now,
+//            date: "",
+//            month: "",
+//            year: "",
+//            email: "",
+//            phoneNumber: ""
+//        )
+//        FlatmatesList()
     }
 }
 
