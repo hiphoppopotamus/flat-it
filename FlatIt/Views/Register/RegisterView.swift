@@ -56,19 +56,6 @@ struct RegisterView: View {
                     }
                 }
         }
-//        NavigationStack(path: <#T##Binding<NavigationPath>#>) {
-//            <#code#>
-//        }
-//        NavigationStack(path: yourPaths) {
-//          FirstScreen()
-//                .navigationDestination(for: YourPath.self){ path in
-//                    switch path {......}
-//
-//                }
-//        }
-        
-        
-
     }
 }
 
@@ -76,8 +63,8 @@ struct TextFieldOutlineStyle: TextFieldStyle {
     var size: CGFloat
     func _body(configuration: TextField<Self._Label>) -> some View {
         configuration
-            .autocorrectionDisabled(true)
             .font(.system(size: size, weight: .bold, design: .rounded))
+            .autocorrectionDisabled(true)
     }
 }
 

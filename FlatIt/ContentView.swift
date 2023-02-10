@@ -11,16 +11,6 @@ struct ContentView: View {
         
     var body: some View {
         RegisterView()
-//        RegisterView(
-//            name: "",
-//            dateOfBirth: Date.now,
-//            date: "",
-//            month: "",
-//            year: "",
-//            email: "",
-//            phoneNumber: ""
-//        )
-//        FlatmatesList()
     }
 }
 

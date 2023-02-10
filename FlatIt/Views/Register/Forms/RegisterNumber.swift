@@ -1,13 +1,14 @@
 //
-//  RegisterEmail.swift
+//  RegisterNumber.swift
 //  FlatIt
 //
 //  Created by Euan Widjaja on 5/02/23.
 //
 
 import SwiftUI
+import iPhoneNumberField
 
-struct RegisterEmail: View {
+struct RegisterNumber: View {
     
     @Binding var path: [RegistrationStep]
 
@@ -16,6 +17,10 @@ struct RegisterEmail: View {
     @Binding var month: String
     @Binding var year: String
     @Binding var email: String
+    @Binding var phoneNumber: String
+    
+    @State var d: String = ""
+
     
     var body: some View {
         VStack(alignment: .center) {
@@ -47,22 +52,42 @@ struct RegisterEmail: View {
             
             Group {
                 TextField("Enter your email", text: $email)
-                    .textFieldStyle(TextFieldOutlineStyle(size: 24))
+                    .textFieldStyle(TextFieldDisabledStyle(size: 24))
                     .padding([.leading, .trailing, .top], 20)
                 InputDivider()
                     .padding(.top, 5.0)
+            }
+            
+            Group {
+                // TODO: Move to style struct/modifier
+                iPhoneNumberField("(000) 000-0000", text: $phoneNumber)
+                    .flagHidden(false)
+                    .prefixHidden(false)
+                    .flagSelectable(true)
+                    .font(UIFont(size: 30, weight: .bold, design: .rounded))
+                    .clearButtonMode(.never)
+                    .padding([.leading, .trailing, .top], 20)
+                    .fixedSize()
+                    .onSubmit {
+                        if isValidNumber() {
+                            path.append(.nameStep)
+                        }
+                    }
+                InputDivider()
+                    .padding(.top, 5.0)
                 
-                Text("What's your email?")
+                Text("Also can I get \nyour number please lol")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .padding(.top, 10.0)
             }
             
             Spacer()
-            // If not correct/invalid then don't be tappable
+
             RegisterButton(
                 label: "Continue",
-                toStep: .phoneNumberStep,
-                path: $path
+                toStep: .nameStep,
+                path: $path,
+                disabled: !isValidNumber()
             )
             .padding(.top, 50.0)
             
@@ -72,15 +97,31 @@ struct RegisterEmail: View {
     }
 }
 
-struct RegisterEmail_Previews: PreviewProvider {
+extension RegisterNumber {
+    
+    // From: https://stackoverflow.com/a/41782027
+    private func isValidNumber() -> Bool {
+        
+        // TODO: Extract to constant
+        let username = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"
+        let mailServer = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}"
+        let emailRegex = username + "@" + mailServer + "[A-Za-z]{2,8}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        
+        return emailPredicate.evaluate(with: email)
+    }
+}
+
+struct RegisterNumber_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterEmail(
+        RegisterNumber(
             path: .constant([]),
             name: .constant("Euan Widjaja"),
             date: .constant("12"),
             month: .constant("12"),
             year: .constant("2000"),
-            email: .constant("euan.widjhaja@xeroc.com")
+            email: .constant("euan.widjhaja@xeroc.com"),
+            phoneNumber: .constant("0224298706")
         )
     }
 }

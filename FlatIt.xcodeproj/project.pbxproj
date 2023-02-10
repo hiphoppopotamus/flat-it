@@ -45,6 +45,7 @@
 		D8547FFD297BF78200655E3D /* BeVietnamPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FEB297BF78200655E3D /* BeVietnamPro-BlackItalic.ttf */; };
 		D8547FFE297BF78200655E3D /* BeVietnamPro-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FEC297BF78200655E3D /* BeVietnamPro-ThinItalic.ttf */; };
 		D8547FFF297BF78200655E3D /* BeVietnamPro-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8547FED297BF78200655E3D /* BeVietnamPro-MediumItalic.ttf */; };
+		D89EE086299249A900B12FAF /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = D89EE085299249A900B12FAF /* iPhoneNumberField */; };
 		D8D6AE26297A96A40046BA1D /* FlatItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE25297A96A40046BA1D /* FlatItApp.swift */; };
 		D8D6AE28297A96A40046BA1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE27297A96A40046BA1D /* ContentView.swift */; };
 		D8D6AE2A297A96A40046BA1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D6AE29297A96A40046BA1D /* Assets.xcassets */; };
@@ -52,7 +53,6 @@
 		D8D6AE34297A96C10046BA1D /* FlatmatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */; };
 		D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE35297A97010046BA1D /* FlatmateRow.swift */; };
 		D8D6AE38297A973C0046BA1D /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D6AE37297A973C0046BA1D /* Flatmate.swift */; };
-		D8FF1FF5297FE69F00193D49 /* OldRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,7 +103,6 @@
 		D8D6AE33297A96C10046BA1D /* FlatmatesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesList.swift; sourceTree = "<group>"; };
 		D8D6AE35297A97010046BA1D /* FlatmateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateRow.swift; sourceTree = "<group>"; };
 		D8D6AE37297A973C0046BA1D /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
-		D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldRegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89EE086299249A900B12FAF /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,13 +120,9 @@
 		D837AD8D298E51DF00037DDD /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D8FF1FF4297FE69F00193D49 /* OldRegisterView.swift */,
+				D85FF5E52997025A0027D8BB /* Forms */,
 				D8484093298F9E4A00B0F994 /* RegisterView.swift */,
 				D8484097298FA55000B0F994 /* RegisterEntry.swift */,
-				D8484095298F9F8C00B0F994 /* RegisterName.swift */,
-				D8484099298FAABC00B0F994 /* RegisterDob.swift */,
-				D848409B298FAACE00B0F994 /* RegisterEmail.swift */,
-				D848409D298FAADF00B0F994 /* RegisterNumber.swift */,
 				D844B15C29865B7600CB03A5 /* RegisterButton.swift */,
 				D837AD8B298E1D7B00037DDD /* RegistrationStep.swift */,
 			);
@@ -199,6 +195,17 @@
 				D8547FEC297BF78200655E3D /* BeVietnamPro-ThinItalic.ttf */,
 			);
 			path = BeVietnamPro;
+			sourceTree = "<group>";
+		};
+		D85FF5E52997025A0027D8BB /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				D8484095298F9F8C00B0F994 /* RegisterName.swift */,
+				D8484099298FAABC00B0F994 /* RegisterDob.swift */,
+				D848409B298FAACE00B0F994 /* RegisterEmail.swift */,
+				D848409D298FAADF00B0F994 /* RegisterNumber.swift */,
+			);
+			path = Forms;
 			sourceTree = "<group>";
 		};
 		D8D6AE19297A96A40046BA1D = {
@@ -275,6 +282,9 @@
 			dependencies = (
 			);
 			name = FlatIt;
+			packageProductDependencies = (
+				D89EE085299249A900B12FAF /* iPhoneNumberField */,
+			);
 			productName = FlatIt;
 			productReference = D8D6AE22297A96A40046BA1D /* FlatIt.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +313,9 @@
 				Base,
 			);
 			mainGroup = D8D6AE19297A96A40046BA1D;
+			packageReferences = (
+				D89EE084299249A900B12FAF /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			productRefGroup = D8D6AE23297A96A40046BA1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,7 +377,6 @@
 				D8D6AE36297A97010046BA1D /* FlatmateRow.swift in Sources */,
 				D8484098298FA55000B0F994 /* RegisterEntry.swift in Sources */,
 				D844B1602986662E00CB03A5 /* FlatItDataModel.xcdatamodeld in Sources */,
-				D8FF1FF5297FE69F00193D49 /* OldRegisterView.swift in Sources */,
 				D844B15D29865B7600CB03A5 /* RegisterButton.swift in Sources */,
 				D84EF89129892C260075C413 /* FlatmatesProvider.swift in Sources */,
 				D8484094298F9E4A00B0F994 /* RegisterView.swift in Sources */,
@@ -575,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D89EE084299249A900B12FAF /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D89EE085299249A900B12FAF /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D89EE084299249A900B12FAF /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D844B15E2986662E00CB03A5 /* FlatItDataModel.xcdatamodeld */ = {

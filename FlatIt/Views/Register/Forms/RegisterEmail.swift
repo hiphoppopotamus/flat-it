@@ -1,5 +1,5 @@
 //
-//  RegisterNumber.swift
+//  RegisterEmail.swift
 //  FlatIt
 //
 //  Created by Euan Widjaja on 5/02/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RegisterNumber: View {
+struct RegisterEmail: View {
     
     @Binding var path: [RegistrationStep]
 
@@ -16,7 +16,6 @@ struct RegisterNumber: View {
     @Binding var month: String
     @Binding var year: String
     @Binding var email: String
-    @Binding var phoneNumber: String
     
     var body: some View {
         VStack(alignment: .center) {
@@ -48,50 +47,63 @@ struct RegisterNumber: View {
             
             Group {
                 TextField("Enter your email", text: $email)
-                    .textFieldStyle(TextFieldDisabledStyle(size: 24))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
-                    .padding(.top, 5.0)
-            }
-            
-            Group {
-                TextField("Enter your number", text: $phoneNumber)
-                    .textFieldStyle(TextFieldOutlineStyle(size: 30))
+                    .onSubmit {
+                        if isValidEmail() {
+                            path.append(.phoneNumberStep)
+                        }
+                    }
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.emailAddress)
+                    .textFieldStyle(TextFieldOutlineStyle(size: 24))
                     .padding([.leading, .trailing, .top], 20)
                 InputDivider()
                     .padding(.top, 5.0)
                 
-                Text("Also can I get \nyour number please lol")
+                Text("What's your email?")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
                     .padding(.top, 10.0)
-            
             }
             
             Spacer()
-            // If not correct/invalid then don't be tappable
+
             RegisterButton(
                 label: "Continue",
-                toStep: .nameStep,
-                path: $path
+                toStep: .phoneNumberStep,
+                path: $path,
+                disabled: !isValidEmail()
             )
             .padding(.top, 50.0)
-            
         }
         .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
         .multilineTextAlignment(.center)
     }
 }
 
-struct RegisterNumber_Previews: PreviewProvider {
+extension RegisterEmail {
+    
+    // From: https://stackoverflow.com/a/41782027
+    private func isValidEmail() -> Bool {
+        
+        // TODO: Extract to constant
+        let username = "[A-Z0-9a-z]([A-Z0-9a-z._%+-]{0,30}[A-Z0-9a-z])?"
+        let mailServer = "([A-Z0-9a-z]([A-Z0-9a-z-]{0,30}[A-Z0-9a-z])?\\.){1,5}"
+        let emailRegex = username + "@" + mailServer + "[A-Za-z]{2,8}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        
+        return emailPredicate.evaluate(with: email)
+    }
+}
+
+
+struct RegisterEmail_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterNumber(
+        RegisterEmail(
             path: .constant([]),
             name: .constant("Euan Widjaja"),
             date: .constant("12"),
             month: .constant("12"),
             year: .constant("2000"),
-            email: .constant("euan.widjhaja@xeroc.com"),
-            phoneNumber: .constant("0224298706")
+            email: .constant("euan.widjhaja@xeroc.com")
         )
     }
 }

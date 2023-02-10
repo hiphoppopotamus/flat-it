@@ -18,6 +18,11 @@ struct RegisterName: View {
             
             Group {
                 TextField("Enter your name", text: $name)
+                    .onSubmit {
+                        if isValidName() {
+                            path.append(.dobStep)
+                        }
+                    }
                     .textFieldStyle(TextFieldOutlineStyle(size: 30))
                     .padding([.leading, .trailing, .top], 20)
                 InputDivider()
@@ -29,16 +34,24 @@ struct RegisterName: View {
             }
             Spacer()
             
-            // If not correct/invalid then don't be tappable
+
             RegisterButton(
                 label: "Continue",
                 toStep: .dobStep,
-                path: $path
+                path: $path,
+                disabled: !isValidName()
             )
             .padding(.top, 50.0)
         }
         .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
         .multilineTextAlignment(.center)
+    }
+}
+
+extension RegisterName {
+    
+    private func isValidName() -> Bool {
+        return !name.isEmpty
     }
 }
 
