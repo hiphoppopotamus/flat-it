@@ -23,14 +23,14 @@ struct RegisterNumber: View {
 
     
     var body: some View {
-        VStack(alignment: .center) {
-            TopDivider()
+        VStack(alignment: .leading) {
+            TopDivider2()
             
             Group {
                 TextField("Enter your name", text: $name)
                     .textFieldStyle(TextFieldDisabledStyle(size: 30))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                    .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
@@ -38,23 +38,23 @@ struct RegisterNumber: View {
                 HStack {
                     Group {
                         TextField(date.isEmpty ? "DD" : "\(date) ", text: $date)
-                        TextField(month.isEmpty ? "MM" : "\(month)", text: $month)
-                        TextField(year.isEmpty ? "YYYY" : " \(year)", text: $year)
+                        TextField(month.isEmpty ? "MM" : "\(month) ", text: $month)
+                        TextField(year.isEmpty ? "YYYY" : "\(year)", text: $year)
                     }
                     
                 }
                 .fixedSize()
                 .textFieldStyle(TextFieldDisabledStyle(size: 30))
-                .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
             Group {
                 TextField("Enter your email", text: $email)
                     .textFieldStyle(TextFieldDisabledStyle(size: 24))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                    .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
@@ -66,34 +66,47 @@ struct RegisterNumber: View {
                     .flagSelectable(true)
                     .font(UIFont(size: 30, weight: .bold, design: .rounded))
                     .clearButtonMode(.never)
-                    .padding([.leading, .trailing, .top], 20)
+                    .padding([.top], 20)
                     .fixedSize()
                     .onSubmit {
                         if isValidNumber() {
                             path.append(.nameStep)
                         }
                     }
-                InputDivider()
+                InputDivider2()
                     .padding(.top, 5.0)
                 
-                Text("Also can I get \nyour number please lol")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                    .padding(.top, 10.0)
+                HStack {
+                    Spacer()
+                    Text("Also can I get your number please lol")
+                        .multilineTextAlignment(.trailing)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .padding(.top, 10.0)
+                }
+                
+            
             }
             
             Spacer()
 
-            RegisterButton(
-                label: "Continue",
-                toStep: .nameStep,
-                path: $path,
-                disabled: !isValidNumber()
-            )
-            .padding(.top, 50.0)
+            HStack {
+                Spacer()
+                RegisterButton(
+                    label: "Continue",
+                    toStep: .nameStep,
+                    path: $path,
+                    disabled: !isValidNumber()
+                )
+                .padding(.top, 50.0)
+            }
+            
             
         }
-        .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
-        .multilineTextAlignment(.center)
+        .frame(
+            maxWidth: UIScreen.main.bounds.width / 1.2,
+            maxHeight: UIScreen.main.bounds.height / 1.6
+        )
+//        .multilineTextAlignment(.center)
     }
 }
 

@@ -18,14 +18,14 @@ struct RegisterEmail: View {
     @Binding var email: String
     
     var body: some View {
-        VStack(alignment: .center) {
-            TopDivider()
+        VStack(alignment: .leading) {
+            TopDivider2()
             
             Group {
                 TextField("Enter your name", text: $name)
                     .textFieldStyle(TextFieldDisabledStyle(size: 30))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                    .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
@@ -33,15 +33,15 @@ struct RegisterEmail: View {
                 HStack {
                     Group {
                         TextField(date.isEmpty ? "DD" : "\(date) ", text: $date)
-                        TextField(month.isEmpty ? "MM" : "\(month)", text: $month)
-                        TextField(year.isEmpty ? "YYYY" : " \(year)", text: $year)
+                        TextField(month.isEmpty ? "MM" : "\(month) ", text: $month)
+                        TextField(year.isEmpty ? "YYYY" : "\(year)", text: $year)
                     }
                     
                 }
                 .fixedSize()
                 .textFieldStyle(TextFieldDisabledStyle(size: 30))
-                .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
@@ -55,27 +55,36 @@ struct RegisterEmail: View {
                     .textInputAutocapitalization(.never)
                     .keyboardType(.emailAddress)
                     .textFieldStyle(TextFieldOutlineStyle(size: 24))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                    .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
                 
-                Text("What's your email?")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                    .padding(.top, 10.0)
+                HStack {
+                    Spacer()
+                    Text("What's your email?")
+                        .multilineTextAlignment(.trailing)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
+                        .padding(.top, 10.0)
+                }
             }
             
             Spacer()
 
-            RegisterButton(
-                label: "Continue",
-                toStep: .phoneNumberStep,
-                path: $path,
-                disabled: !isValidEmail()
-            )
-            .padding(.top, 50.0)
+            HStack {
+                Spacer()
+                RegisterButton(
+                    label: "Continue",
+                    toStep: .phoneNumberStep,
+                    path: $path,
+                    disabled: !isValidEmail()
+                )
+                .padding(.top, 50.0)
+            }
         }
-        .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
-        .multilineTextAlignment(.center)
+        .frame(
+            maxWidth: UIScreen.main.bounds.width / 1.2,
+            maxHeight: UIScreen.main.bounds.height / 1.6
+        )
     }
 }
 

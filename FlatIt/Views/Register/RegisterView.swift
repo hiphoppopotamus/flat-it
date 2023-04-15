@@ -101,10 +101,6 @@ struct InputDivider: View {
     }
 }
 
-
-
-
-
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView()

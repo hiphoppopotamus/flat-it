@@ -18,14 +18,14 @@ struct RegisterDob: View {
     @Binding var year: String
     
     var body: some View {
-        VStack(alignment: .center) {
-            TopDivider()
+        VStack(alignment: .leading) {
+            TopDivider2()
             
             Group {
                 TextField("Enter your name", text: $name)
                     .textFieldStyle(TextFieldDisabledStyle(size: 30))
-                    .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                    .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
             }
             
@@ -48,28 +48,37 @@ struct RegisterDob: View {
                 }
                 .fixedSize()
                 .textFieldStyle(TextFieldOutlineStyle(size: 30))
-                .padding([.leading, .trailing, .top], 20)
-                InputDivider()
+                .padding([.top], 20)
+                InputDivider2()
                     .padding(.top, 5.0)
                 
-                Text("Hey \(name),\nwhen’s your birthday?")
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                HStack {
+                    Spacer()
+                    Text("Hey \(name),\nwhen’s your birthday?")
+                        .multilineTextAlignment(.trailing)
+                        .font(.system(size: 20, weight: .bold, design: .rounded))
                     .padding(.top, 10.0)
+                }
             }
             
             Spacer()
 
-            RegisterButton(
-                label: "Continue",
-                toStep: .emailStep,
-                path: $path,
-                disabled: !isValidDob()
-            )
-            .padding(.top, 50.0)
+            HStack {
+                Spacer()
+                RegisterButton(
+                    label: "Continue",
+                    toStep: .emailStep,
+                    path: $path,
+                    disabled: !isValidDob()
+                )
+                .padding(.top, 50.0)
+            }
             
         }
-        .frame(maxHeight: UIScreen.main.bounds.height / 1.6, alignment: .top)
-        .multilineTextAlignment(.center)
+        .frame(
+            maxWidth: UIScreen.main.bounds.width / 1.2,
+            maxHeight: UIScreen.main.bounds.height / 1.6
+        )
     }
 }
 
